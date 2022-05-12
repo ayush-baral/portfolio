@@ -1,5 +1,4 @@
 import React from "react";
-import Me from "../../assets/Me.png";
 import { BsMouse } from "react-icons/bs";
 
 const Intro = () => {
@@ -11,21 +10,21 @@ const Intro = () => {
           <h1 className="text-6xl font-semibold my-8">Ayush</h1>
           <div className="h-[50px] overflow-hidden">
             <div className="h-full title-wrapper">
-              <div className="text-green-500 h-[50px] text-3xl font-bold flex items-center">
+              <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
-              <div className="text-green-500 h-[50px] text-3xl font-bold flex items-center">
+              <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
-              <div className="text-green-500 h-[50px] text-3xl font-bold flex items-center">
+              <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
-              <div className="text-green-500 h-[50px] text-3xl font-bold flex items-center">
+              <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
             </div>
           </div>
-          <p className="flex flex-col justify-between mt-8">
+          <p className="flex flex-col justify-between mt-8 ">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad tenetur
             aliquid, labore porro nobis quas vel amet necessitatibus eius
             distinctio, atque quibusdam minima debitis dolor deserunt molestiae
@@ -36,8 +35,12 @@ const Intro = () => {
         </div>
       </div>
       <div className="flex-1 h-full relative">
-        <div className="clip-left bg-green-400 w-full h-full absolute top-0 right-0"></div>
-        <img src={Me} alt="" className="w-full h-full object-cover absolute" />
+        <div className="clip-left  w-full h-full absolute top-0 right-0"></div>
+        <img
+          src="https://www.seekpng.com/png/full/53-537858_monsters-png-1024x1024-monsters-illustration-flat-png.png"
+          alt=""
+          className="w-full h-full object-contain absolute"
+        />
       </div>
     </div>
   );

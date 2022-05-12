@@ -5,7 +5,7 @@ import Intro from "./components/intro";
 function App() {
   return (
     <div>
-      {/* <Intro /> */}
+      <Intro />
       <About />
     </div>
   );
