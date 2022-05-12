@@ -1,9 +1,12 @@
 import React from "react";
+import About from "./components/About";
+import Intro from "./components/intro";
 
 function App() {
   return (
-    <div className="font-bold text-green-400 text-3xl text-center text-clip">
-      Welcome to the site
+    <div>
+      {/* <Intro /> */}
+      <About />
     </div>
   );
 }
