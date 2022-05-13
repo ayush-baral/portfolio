@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { BsPinMap } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import { Dark } from "../../interface/dark";
 
 interface MessageForm {
   name: string;
@@ -12,7 +13,7 @@ interface MessageForm {
   subject: string;
 }
 
-const Contact = () => {
+const Contact: React.FC<{ dark: Dark }> = () => {
   const [loading, setLoading] = React.useState(false);
 
   const {

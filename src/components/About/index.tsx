@@ -1,7 +1,8 @@
 import React from "react";
 import Award from "../../assets/award.png";
+import { Dark } from "../../interface/dark";
 
-const About = () => {
+const About: React.FC<{ dark: Dark }> = () => {
   return (
     <div className="h-screen flex items-center">
       <div className="flex-1 flex items-center justify-center relative h-full">

@@ -1,8 +1,9 @@
 import React from "react";
 import sun from "../../assets/sun.png";
 import moon from "../../assets/moon.png";
+import { Dark, SetDark } from "../../interface/dark";
 
-const Toggle = () => {
+const Toggle: React.FC<{ dark: Dark; onSetDark: SetDark }> = () => {
   return (
     <div className="w-[50px] h-[25px] rounded-[20px] border-2 border-[#999] fixed top-3 right-3 z-10 flex items-center justify-around">
       <img src={sun} alt="" className="w-4" />

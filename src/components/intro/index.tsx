@@ -1,7 +1,8 @@
 import React from "react";
 import { BsMouse } from "react-icons/bs";
+import { Dark } from "../../interface/dark";
 
-const Intro = () => {
+const Intro: React.FC<{ dark: Dark }> = () => {
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="flex-1">

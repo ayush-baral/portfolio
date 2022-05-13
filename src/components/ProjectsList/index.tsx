@@ -1,8 +1,9 @@
 import React from "react";
+import { Dark } from "../../interface/dark";
 import Project from "../Project";
 import { PROJECT } from "./project";
 
-const ProjectsList = () => {
+const ProjectsList: React.FC<{ dark: Dark }> = () => {
   return (
     <div className="py-[50px] px-[100px] flex flex-col items-center text-center">
       <div className="w-[65%]">
