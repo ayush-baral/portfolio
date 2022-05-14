@@ -14,7 +14,7 @@ interface ToggleState {
 
 export const ThemeContext = createContext<any>(null);
 
-const INITIAL_STATE: ToggleState = { darkMode: false };
+const INITIAL_STATE: ToggleState = { darkMode: true };
 
 const themeReducer = (state: ToggleState, action: DarkModeAction) => {
   switch (action.type) {

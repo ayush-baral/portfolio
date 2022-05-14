@@ -17,17 +17,16 @@ const About = () => {
       <div className="flex-1 mt-20 md:mt-0 p-4">
         <h1 className="font-normal text-3xl">About Me</h1>
         <p className="my-5 mx-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eaque
-          omnis incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.
+          Hello i am ayush, I am a web developer. I am currently working with
+          technologies like React, tailwindcss, typescript, next js chakra ui
+          and more.
         </p>
         <p className="font-light">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-          voluptatibus vitae vel et? Fugit vero odit sequi unde hic ex ratione
-          rerum nobis sapiente pariatur! Explicabo nihil aliquam odio, incidunt
-          odit provident dolor dicta tenetur Lorem ipsum dolor sit amet Lorem.
+          I graduated from the Informatics College Pokhara in the year 2022.
+          Beside web development, I am also intrested in activities like
+          Football, Video Games and so on.
         </p>
-        <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
+        {/* <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
           <img
             src={Award}
             alt=""
@@ -43,10 +42,10 @@ const About = () => {
               quae atque neque veritatis.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default About;
+export default React.memo(About);

@@ -8,10 +8,8 @@ const ProjectsList = () => {
       <div className="w-full md:w-[65%]">
         <h1 className="text-5xl my-20 mx-0">Create & Inspire. It's Ayush</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem totam
-          iste inventore mollitia voluptate laborum est natus? Quia nesciunt
-          corporis, corrupti fugit labore sint officiis rem iure architecto
-          magni maiores.
+          Welcome to the projects section. Here you can see some of the projects
+          that i have built while working as a web developer.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
@@ -23,4 +21,4 @@ const ProjectsList = () => {
   );
 };
 
-export default ProjectsList;
+export default React.memo(ProjectsList);

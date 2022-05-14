@@ -25,9 +25,10 @@ const Intro = () => {
             </div>
           </div>
           <p className="flex flex-col justify-between mt-8 ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad tenetur
-            aliquid, labore porro nobis quas vel amet necessitatibus eius
-            distinctio, atque quibusdam minima debitis dolor deserunt molestiae
+            Hello and welcome to my portfolio. I am a web developer. I am
+            currently working with technologies like React, tailwindcss,
+            typescript, next js chakra ui and more. You can contact me from
+            contact section on this website.
           </p>
         </div>
         <div className="text-3xl absolute bottom-4 left-1/4 ">
