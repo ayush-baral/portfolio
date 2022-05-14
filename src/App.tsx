@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Toaster } from "react-hot-toast";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Intro from "./components/intro";
 import ProjectsList from "./components/ProjectsList";
 import Toggle from "./components/toggle";
+import { ThemeContext } from "./context";
 
 function App() {
-  const [dark, setDark] = React.useState(false);
+  const theme = useContext(ThemeContext);
+
+  const darkMode = theme.darkMode;
+
   return (
-    <div className="max-w-[1440px] my-0 mx-auto">
+    <div className={` ${darkMode ? "bg-[#222] text-white" : "bg-white"}`}>
       <Toaster position="top-right" />
-      <Toggle onSetDark={setDark} dark={dark} />
-      <Intro dark={dark} />
-      <About dark={dark} />
-      <ProjectsList dark={dark} />
-      <Contact dark={dark} />
+      <Toggle />
+      <Intro />
+      <About />
+      <ProjectsList />
+      <Contact />
     </div>
   );
 }

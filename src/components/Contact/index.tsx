@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { BsPinMap } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import { Dark } from "../../interface/dark";
+import { ThemeContext } from "../../context";
 
 interface MessageForm {
   name: string;
@@ -13,8 +13,9 @@ interface MessageForm {
   subject: string;
 }
 
-const Contact: React.FC<{ dark: Dark }> = () => {
+const Contact = () => {
   const [loading, setLoading] = React.useState(false);
+  const theme = useContext(ThemeContext);
 
   const {
     register,
@@ -63,15 +64,15 @@ const Contact: React.FC<{ dark: Dark }> = () => {
           <div>
             <div className="flex items-center gap-4 my-12">
               <AiOutlinePhone />
-              <span className="text-black">+977 9866064677</span>
+              <span>+977 9866064677</span>
             </div>
             <div className="flex items-center gap-4 my-12">
               <AiOutlineMail />
-              <span className="text-black">ayushbaral17@gmail.com</span>
+              <span>ayushbaral17@gmail.com</span>
             </div>
             <div className="flex items-center gap-4 my-12 w-9/12">
               <BsPinMap />
-              <span className="text-black">Pokhara, Nepal</span>
+              <span>Pokhara, Nepal</span>
             </div>
           </div>
         </div>
@@ -86,7 +87,9 @@ const Contact: React.FC<{ dark: Dark }> = () => {
               {...register("name", { required: " This field is required" })}
               type="text"
               placeholder="Name"
-              className="block w-full h-[50px] border-b-2 outline-none border-primary border-b-solid my-3 mx-0 pl-3"
+              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+                theme.darkMode && "bg-[#333]"
+              }`}
             />
             {errors?.name && (
               <p className="text-red-500">This field is required</p>
@@ -102,7 +105,9 @@ const Contact: React.FC<{ dark: Dark }> = () => {
               })}
               type="email"
               placeholder="Email"
-              className="block w-full h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3"
+              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+                theme.darkMode && "bg-[#333]"
+              }`}
             />
             {errors?.email && (
               <p className="text-red-500">This field is required</p>
@@ -111,7 +116,9 @@ const Contact: React.FC<{ dark: Dark }> = () => {
               {...register("subject", { required: " This field is required" })}
               type="text"
               placeholder="Subject"
-              className="block w-full h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3"
+              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+                theme.darkMode && "bg-[#333]"
+              }`}
             />
             {errors?.subject && (
               <p className="text-red-500">This field is required</p>
@@ -124,9 +131,11 @@ const Contact: React.FC<{ dark: Dark }> = () => {
                   message: "Message cannot be less than 10 characters",
                 },
               })}
-              rows={10}
+              rows={5}
               placeholder="Message"
-              className="block w-full  border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3"
+              className={`block w-full  border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+                theme.darkMode && "bg-[#333]"
+              }`}
             />
             {errors?.message && (
               <p className="text-red-500">This field is required</p>
@@ -134,7 +143,7 @@ const Contact: React.FC<{ dark: Dark }> = () => {
             <button
               disabled={loading}
               type="submit"
-              className="bg-primary text-white py-3 px-6 transition hover:scale-110 hover:-translate-y-1 duration-500 disabled:cursor-not-allowed disabled:bg-slate-400"
+              className="bg-primary mt-6 text-white py-3 px-6 transition hover:scale-110 hover:-translate-y-1 duration-500 disabled:cursor-not-allowed disabled:bg-slate-400"
             >
               Send
             </button>

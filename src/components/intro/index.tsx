@@ -1,8 +1,7 @@
 import React from "react";
 import { BsMouse } from "react-icons/bs";
-import { Dark } from "../../interface/dark";
 
-const Intro: React.FC<{ dark: Dark }> = () => {
+const Intro = () => {
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="flex-1">
@@ -31,7 +30,7 @@ const Intro: React.FC<{ dark: Dark }> = () => {
             distinctio, atque quibusdam minima debitis dolor deserunt molestiae
           </p>
         </div>
-        <div className="text-black text-3xl absolute bottom-30 left-1/4">
+        <div className="text-3xl absolute bottom-30 left-1/4 ">
           <BsMouse />
         </div>
       </div>
