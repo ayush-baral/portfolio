@@ -56,11 +56,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen relative">
+    <div className="h-auto md:h-screen relative">
       <div className="w-5 h-full bg-primary absolute"></div>
-      <div className="p-12 flex">
+      <div className="p-12 flex flex-col md:flex-row">
         <div className="flex-1">
-          <h1 className="text-[60px] w-[60%]">Let's discuss your project</h1>
+          <h1 className="text-5xl md:text-[60px] w-[60%]">
+            Let's discuss your project
+          </h1>
           <div>
             <div className="flex items-center gap-4 my-12">
               <AiOutlinePhone />
@@ -87,7 +89,7 @@ const Contact = () => {
               {...register("name", { required: " This field is required" })}
               type="text"
               placeholder="Name"
-              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+              className={`block  w-full md:w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
                 theme.darkMode && "bg-[#333]"
               }`}
             />
@@ -105,7 +107,7 @@ const Contact = () => {
               })}
               type="email"
               placeholder="Email"
-              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+              className={`block  w-full md:w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
                 theme.darkMode && "bg-[#333]"
               }`}
             />
@@ -116,7 +118,7 @@ const Contact = () => {
               {...register("subject", { required: " This field is required" })}
               type="text"
               placeholder="Subject"
-              className={`block w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
+              className={`block w-full md:w-3/5 h-[50px] border-b-2 outline-none border-primary border-b-solid my-4 mx-0 pl-3 ${
                 theme.darkMode && "bg-[#333]"
               }`}
             />

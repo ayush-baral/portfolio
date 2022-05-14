@@ -3,7 +3,7 @@ import { BsMouse } from "react-icons/bs";
 
 const Intro = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex flex-col md:flex-row h-screen items-center justify-center mb-20">
       <div className="flex-1">
         <div className="p-[50px] h-1/2 ">
           <h2 className="text-3xl font-light">Hello, My Name is </h2>
@@ -30,12 +30,12 @@ const Intro = () => {
             distinctio, atque quibusdam minima debitis dolor deserunt molestiae
           </p>
         </div>
-        <div className="text-3xl absolute bottom-30 left-1/4 ">
+        <div className="text-3xl absolute bottom-4 left-1/4 ">
           <BsMouse />
         </div>
       </div>
-      <div className="flex-1 h-full relative">
-        <div className="clip-left  w-full h-full absolute top-0 right-0"></div>
+      <div className="flex-1 h-fit w-full mb-10  md:h-full relative">
+        <div className="clip-left  w-full h-full absolute top-0 right-0 "></div>
         <img
           src="https://www.seekpng.com/png/full/53-537858_monsters-png-1024x1024-monsters-illustration-flat-png.png"
           alt=""

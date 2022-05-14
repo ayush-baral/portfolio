@@ -5,7 +5,7 @@ const Project: React.FC<{ projectData: ProjectInterface }> = ({
   projectData,
 }) => {
   return (
-    <div className="w-full h-[40vh] my-5 mx-3 border-2 rounded-tl-xl rounded-tr-xl overflow-hidden">
+    <div className="w-full h-[40vh] my-5  border-2 rounded-tl-xl rounded-tr-xl overflow-hidden">
       <div className="h-5 flex items-center bg-gray-100 sticky z-10">
         <div className="w-[6px] h-[6px] rounded-full bg-red-600 m-1"></div>
         <div className="w-[6px] h-[6px] rounded-full bg-yellow-400 m-1"></div>
