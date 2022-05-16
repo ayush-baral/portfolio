@@ -80,9 +80,8 @@ const Contact = () => {
         </div>
         <div className="flex-1 flex flex-col justify-center">
           <p className="font-extralight">
-            <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</b>{" "}
-            Similique quod rerum fugit eos tempore, praesentium excepturi aut
-            ratione totam recusandae!
+            <b className="text-xl">Hello there, Want to contact us?</b> Plz Fill
+            in the form below and we will get back to you as soon as possible.
           </p>
           <form className="mt-5" onSubmit={handleSubmit(submitMessageHandler)}>
             <input
