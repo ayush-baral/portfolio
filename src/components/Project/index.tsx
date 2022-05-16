@@ -20,7 +20,7 @@ const Project: React.FC<{ projectData: ProjectInterface }> = ({
         <img
           src={projectData?.img}
           alt="project"
-          className="w-full transition-all duration-[5s] ease-in bg-cover hover:translate-y-[-60%]"
+          className="w-full transition-all duration-[5s] ease-in bg-cover hover:translate-y-[-70%]"
         />
       </a>
     </div>
