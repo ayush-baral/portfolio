@@ -18,6 +18,7 @@ const Project: React.FC<{ projectData: ProjectInterface }> = ({
         className="w-full "
       >
         <img
+          loading="lazy"
           src={projectData?.img}
           alt="project"
           className="w-full transition-all duration-[5s] ease-in bg-cover hover:translate-y-[-70%]"
@@ -27,4 +28,4 @@ const Project: React.FC<{ projectData: ProjectInterface }> = ({
   );
 };
 
-export default Project;
+export default React.memo(Project);

@@ -5,6 +5,7 @@ import { BsPinMap } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { ThemeContext } from "../../context";
+import MoveInFromLeftOnView from "../Motions/MoveInFromLeftOnView";
 
 interface MessageForm {
   name: string;
@@ -141,13 +142,15 @@ const Contact = () => {
             {errors?.message && (
               <p className="text-red-500">This field is required</p>
             )}
-            <button
-              disabled={loading}
-              type="submit"
-              className="bg-primary mt-6 text-white py-3 px-6 transition hover:scale-110 hover:-translate-y-1 duration-500 disabled:cursor-not-allowed disabled:bg-slate-400"
-            >
-              Send
-            </button>
+            <MoveInFromLeftOnView>
+              <button
+                disabled={loading}
+                type="submit"
+                className="bg-primary mt-6 inline-block text-white py-3 px-6 transition hover:scale-110 hover:-translate-y-1 duration-500 disabled:cursor-not-allowed disabled:bg-slate-400"
+              >
+                Send
+              </button>
+            </MoveInFromLeftOnView>
           </form>
         </div>
       </div>
