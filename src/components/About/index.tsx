@@ -4,11 +4,11 @@ import Skills from "./Skills";
 
 const About = () => {
   return (
-    <div className="h-auto md:h-screen flex flex-col md:flex-row items-center">
+    <div className="h-auto md:h-screen flex flex-col md:flex-row items-center overflow-hidden">
       <FadeInWhenVisible>
         <div className="flex-1 flex items-center justify-center relative h-full w-full">
-          <div className="w-[90%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] absolute top-[50px] left-[50px] bg-[#333] "></div>
-          <div className="w-[90%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] relative overflow-hidden">
+          <div className="w-[85%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] absolute top-[50px] left-[50px] bg-[#333] "></div>
+          <div className="w-[85%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] relative overflow-hidden">
             <img
               src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
