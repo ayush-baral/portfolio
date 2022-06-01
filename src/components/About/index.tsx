@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FadeInWhenVisible } from "../Motions/FadeInWhileVisible";
+import Skills from "./Skills";
 
 const About = () => {
   return (
@@ -31,6 +31,9 @@ const About = () => {
             Beside web development, I am also intrested in activities like
             Football, Video Games and so on.
           </p>
+          <div className="w-full mt-6 overflow-hidden">
+            <Skills />
+          </div>
           {/* <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
           <img
             src={Award}
