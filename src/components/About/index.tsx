@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="h-auto md:h-screen flex flex-col md:flex-row items-center">
       <FadeInWhenVisible>
-        <div className="flex-1 flex items-center justify-center relative h-full">
+        <div className="flex-1 flex items-center justify-center relative h-full w-full">
           <div className="w-[90%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] absolute top-[50px] left-[50px] bg-[#333] "></div>
           <div className="w-[90%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] relative overflow-hidden">
             <img
@@ -17,24 +17,24 @@ const About = () => {
           </div>
         </div>
       </FadeInWhenVisible>
-
-      <FadeInWhenVisible>
-        <div className="flex-1 mt-20 md:mt-0 p-4">
-          <h1 className="font-normal text-3xl">About Me</h1>
-          <p className="my-5 mx-0">
-            Hello i am ayush, I am a web developer. I am currently working with
-            technologies like React, tailwindcss, typescript, next js chakra ui
-            and more.
-          </p>
-          <p className="font-light">
-            I graduated from the Informatics College Pokhara in the year 2022.
-            Beside web development, I am also intrested in activities like
-            Football, Video Games and so on.
-          </p>
-          <div className="w-full mt-6 overflow-hidden">
-            <Skills />
-          </div>
-          {/* <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
+      <div className="w-full md:w-[50%] m-0">
+        <FadeInWhenVisible>
+          <div className="flex-1 mt-20 md:mt-0 p-4">
+            <h1 className="font-normal text-3xl">About Me</h1>
+            <p className="my-5 mx-0">
+              Hello i am ayush, I am a web developer. I am currently working
+              with technologies like React, tailwindcss, typescript, next js
+              chakra ui and more.
+            </p>
+            <p className="font-light">
+              I graduated from the Informatics College Pokhara in the year 2022.
+              Beside web development, I am also intrested in activities like
+              Football, Video Games and so on.
+            </p>
+            <div className="w-full mt-6">
+              <Skills />
+            </div>
+            {/* <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
           <img
             src={Award}
             alt=""
@@ -45,14 +45,15 @@ const About = () => {
               International Design Awards 2021
             </h4>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Repudiandae aliquam fuga ullam officiis! Atque, aspernatur? Culpa
               quae atque neque veritatis.
-            </p>
+              </p>
+              </div>
+            </div> */}
           </div>
-        </div> */}
-        </div>
-      </FadeInWhenVisible>
+        </FadeInWhenVisible>
+      </div>
     </div>
   );
 };
