@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ScrollProgress = () => {
-  const [position, setPosition] = useState<number>(60);
+  const [position, setPosition] = useState<number>(0);
 
   useEffect(() => {
     const listenToScrollEvent = () => {
