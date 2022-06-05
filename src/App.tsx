@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Intro from "./components/intro";
 import ProjectsList from "./components/ProjectsList";
+import ScrollProgress from "./components/ScrollProgress";
 import Toggle from "./components/toggle";
 import { ThemeContext } from "./context";
 
@@ -13,14 +14,21 @@ function App() {
   const darkMode = theme.darkMode;
 
   return (
-    <div className={` ${darkMode ? "bg-[#222] text-white" : "bg-white"}`}>
-      <Toaster position="top-right" />
-      <Toggle />
-      <Intro />
-      <About />
-      <ProjectsList />
-      <Contact />
-    </div>
+    <>
+      <ScrollProgress />
+      <div
+        className={` overflow-hidden ${
+          darkMode ? "bg-[#222] text-white" : "bg-white"
+        }`}
+      >
+        <Toaster position="top-right" />
+        <Toggle />
+        <Intro />
+        <About />
+        <ProjectsList />
+        <Contact />
+      </div>
+    </>
   );
 }
 
