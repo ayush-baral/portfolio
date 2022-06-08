@@ -3,6 +3,7 @@ import Todo from "../../assets/projects/todo.png";
 import hulu from "../../assets/projects/hulu.png";
 import bandb from "../../assets/projects/bandb.png";
 import googleSearch from "../../assets/projects/google-search.png";
+import wordsandpages from "../../assets/projects/words-and-pages.png";
 
 export const PROJECT: ProjectInterface[] = [
   {
@@ -24,5 +25,10 @@ export const PROJECT: ProjectInterface[] = [
     id: 4,
     img: googleSearch,
     link: "https://google-search-ayush.vercel.app",
+  },
+  {
+    id: 5,
+    img: wordsandpages,
+    link: "https://words-and-pages.vercel.app/",
   },
 ];
