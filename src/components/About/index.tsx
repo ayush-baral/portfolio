@@ -11,7 +11,7 @@ const About = () => {
           <div className="w-[85%] md:w-[60%] h-[40vh] md:h-[70vh] rounded-[30px] relative overflow-hidden">
             <img
               src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
+              alt="Ayush Baral"
               className="h-full w-full object-cover"
             />
           </div>
@@ -34,23 +34,6 @@ const About = () => {
             <div className="w-full mt-6">
               <Skills />
             </div>
-            {/* <div className="mt-12 flex flex-col md:flex-row gap-y-10 items-center justify-between">
-          <img
-            src={Award}
-            alt=""
-            className="h-full mw-full md:h-[120px] md:w-[120px] rounded-[20px]"
-          />
-          <div className="w-full md:w-[70%]">
-            <h4 className="font-bold color:[#555] mb-3">
-              International Design Awards 2021
-            </h4>
-            <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Repudiandae aliquam fuga ullam officiis! Atque, aspernatur? Culpa
-              quae atque neque veritatis.
-              </p>
-              </div>
-            </div> */}
           </div>
         </FadeInWhenVisible>
       </div>

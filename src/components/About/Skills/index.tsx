@@ -47,7 +47,11 @@ const Skills = () => {
           (item, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item} alt="" className={`w-10 object-cover `} />
+                <img
+                  src={item}
+                  alt="Software developer"
+                  className={`w-10 object-cover `}
+                />
               </SwiperSlide>
             );
           }

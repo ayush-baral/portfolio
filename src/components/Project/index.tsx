@@ -20,7 +20,7 @@ const Project: React.FC<{ projectData: ProjectInterface }> = ({
         <img
           loading="lazy"
           src={projectData?.img}
-          alt="project"
+          alt="Ayush Baral"
           className="w-full transition-all duration-[5s] ease-in bg-cover hover:translate-y-[-70%]"
         />
       </a>

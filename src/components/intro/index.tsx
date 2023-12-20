@@ -1,6 +1,7 @@
 import React from "react";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
+import developerImage from "../../assets/developer.png";
 
 export const leftSlide = {
   hidden: {
@@ -45,28 +46,30 @@ const Intro = () => {
       >
         <div className="p-[50px] h-1/2">
           <h2 className="text-3xl font-light">Hello, My Name is </h2>
-          <h1 className="text-6xl font-semibold my-8">Ayush</h1>
+          <h1 className="text-6xl font-semibold my-8">Ayush Baral</h1>
           <div className="h-[50px] overflow-hidden">
             <div className="h-full title-wrapper">
               <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
               <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
-                Web Developer
+                Technology Enthusiastic
               </div>
               <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
                 Web Developer
               </div>
               <div className="text-primary h-[50px] text-3xl font-bold flex items-center">
-                Web Developer
+                Technology Enthusiastic
               </div>
             </div>
           </div>
-          <p className="flex flex-col justify-between mt-8 ">
-            Hello and welcome to my portfolio. I am a web developer. I am
-            currently working with technologies like React, tailwindcss,
-            typescript, next js chakra ui and more. You can contact me from
-            contact section on this website.
+          <p className="flex flex-col justify-between mt-8 mb-4">
+            Motivated professional offers expertise in HTML5, CSS3, JavaScript,
+            typescript and react js. Adept at troubleshooting and resolving
+            complex technical issues, while consistently meeting deadlines and
+            client expectations. Proven ability to quickly learn and apply new
+            technologies and techniques to enhance user experience and enable
+            website optimization.
           </p>
         </div>
         <motion.div
@@ -86,8 +89,8 @@ const Intro = () => {
       >
         <div className="clip-left  w-full h-full absolute top-0 right-0 "></div>
         <img
-          src="https://www.seekpng.com/png/full/53-537858_monsters-png-1024x1024-monsters-illustration-flat-png.png"
-          alt=""
+          src={developerImage}
+          alt="Developer"
           className="w-full h-full object-contain absolute"
         />
       </motion.div>
