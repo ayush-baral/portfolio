@@ -1,5 +1,5 @@
 import React from "react";
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import tailwind from "../../../assets/skills/Tailwind_CSS_Logo.svg";
 import react from "../../../assets/skills/React-icon.svg";
@@ -11,53 +11,45 @@ import Next from "../../../assets/skills/next-js-seeklogo.com.svg";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/bundle";
+import "swiper/css/autoplay";
 
 const Skills = () => {
   return (
-    <>
-      <Swiper
-        className="w-full overflow-hidden"
-        // install Swiper modules
-        // centeredSlides={true}
-        modules={[Navigation, Autoplay]}
-        spaceBetween={10}
-        // navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          320: {
-            slidesPerView: 3,
-            // spaceBetween: 30,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          // when window width is >= 1200px
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        }}
-        width={1000}
-        autoplay={{ disableOnInteraction: false, delay: 500 }}
-      >
-        {[react, tailwind, HTML, CSS, JS, TS, Next, react].map(
-          (item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <img
-                  src={item}
-                  alt="Software developer"
-                  className={`w-10 object-cover `}
-                />
-              </SwiperSlide>
-            );
-          }
-        )}
-      </Swiper>
-    </>
+    <Swiper
+      className="w-full"
+      modules={[Autoplay]}
+      spaceBetween={5}
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      }}
+      autoplay={{ disableOnInteraction: false, delay: 2000 }}
+      loop
+    >
+      {[react, tailwind, HTML, CSS, JS, TS, Next].map((item, index) => (
+        <SwiperSlide key={index} className="flex justify-center">
+          <img
+            src={item}
+            alt="Software skill"
+            className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
