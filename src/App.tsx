@@ -7,6 +7,7 @@ import ProjectsList from "./components/ProjectsList";
 import ScrollProgress from "./components/ScrollProgress";
 import Toggle from "./components/toggle";
 import { ThemeContext } from "./context";
+import WorkExperienceTimeline from "./components/Experience";
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -26,6 +27,7 @@ function App() {
         <Intro />
         <About />
         <ProjectsList />
+        <WorkExperienceTimeline />
         <Contact />
       </div>
     </>
