@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const moveInFromLeftOnView = {
   hidden: {
-    x: -1000,
+    x: -300,
   },
   visible: {
     x: 0,
@@ -19,10 +19,10 @@ const moveInFromLeftOnView = {
 const MoveInFromLeftOnView = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
-      className="h-auto w-full"
+      className='h-auto w-full'
       variants={moveInFromLeftOnView}
-      initial="hidden"
-      whileInView="visible"
+      initial='hidden'
+      whileInView='visible'
       viewport={{ once: true }}
     >
       {children}
