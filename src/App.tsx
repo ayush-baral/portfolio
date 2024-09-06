@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Toaster } from "react-hot-toast";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -19,10 +19,10 @@ function App() {
       <ScrollProgress />
       <div
         className={` overflow-hidden ${
-          darkMode ? "bg-[#222] text-white" : "bg-white"
+          darkMode ? "bg-gray-900 text-white" : "bg-white"
         }`}
       >
-        <Toaster position="top-right" />
+        <Toaster position='top-right' />
         <Toggle />
         <Intro />
         <About />
