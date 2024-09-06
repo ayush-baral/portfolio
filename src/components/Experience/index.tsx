@@ -79,62 +79,55 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
   isLeft,
 }) => {
   const contentClasses =
-    "bg-gray-100 dark:bg-gray-800 rounded-lg shadow-xl w-5/12 px-6 py-4";
+    "bg-gray-100 dark:bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4";
+
+  const Content = () => (
+    <>
+      <div className='md:hidden flex justify-center mb-4'>
+        <div className='z-20 flex items-center bg-gray-800 shadow-xl w-8 h-8 rounded-full'>
+          <FaBriefcase className='text-white mx-auto' />
+        </div>
+      </div>
+      <h3 className='mb-3 font-bold text-gray-800 dark:text-white text-xl'>
+        {company}
+      </h3>
+      <h4 className='mb-3 font-semibold text-gray-700 dark:text-gray-300 text-md'>
+        {position}
+      </h4>
+      <p className='text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-400 text-opacity-100 flex items-center mb-3'>
+        <FaCalendar className='mr-2' /> {duration}
+      </p>
+      <ul className='list-disc pl-5'>
+        {description.map((item, idx) => (
+          <li
+            key={idx}
+            className='text-sm text-gray-600 dark:text-gray-400 mb-1'
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 
   return (
     <div className='mb-8 flex justify-between items-center w-full'>
       {isLeft ? (
         <div className={`order-1 ${contentClasses}`}>
-          <h3 className='mb-3 font-bold text-gray-800 dark:text-white text-xl'>
-            {company}
-          </h3>
-          <h4 className='mb-3 font-semibold text-gray-700 dark:text-gray-300 text-md'>
-            {position}
-          </h4>
-          <p className='text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-400 text-opacity-100 flex items-center mb-3'>
-            <FaCalendar className='mr-2' /> {duration}
-          </p>
-          <ul className='list-disc pl-5'>
-            {description.map((item, idx) => (
-              <li
-                key={idx}
-                className='text-sm text-gray-600 dark:text-gray-400 mb-1'
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+          <Content />
         </div>
       ) : (
-        <div className='order-1 w-5/12'></div>
+        <div className='order-1 w-5/12 hidden md:block'></div>
       )}
-      <div className='z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full'>
+      <div className='z-20 items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full hidden md:flex'>
         <FaBriefcase className='text-white mx-auto' />
       </div>
       {!isLeft ? (
         <div className={`order-1 ${contentClasses}`}>
-          <h3 className='mb-3 font-bold text-gray-800 dark:text-white text-xl'>
-            {company}
-          </h3>
-          <h4 className='mb-3 font-semibold text-gray-700 dark:text-gray-300 text-md'>
-            {position}
-          </h4>
-          <p className='text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-400 text-opacity-100 flex items-center mb-3'>
-            <FaCalendar className='mr-2' /> {duration}
-          </p>
-          <ul className='list-disc pl-5'>
-            {description.map((item, idx) => (
-              <li
-                key={idx}
-                className='text-sm text-gray-600 dark:text-gray-400 mb-1'
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+          <Content />
         </div>
       ) : (
-        <div className='order-1 w-5/12'></div>
+        <div className='order-1 w-5/12 hidden md:block'></div>
       )}
     </div>
   );
@@ -143,9 +136,9 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   return (
     <div className='container mx-auto w-full h-full'>
-      <div className='relative wrap overflow-hidden p-10 h-full'>
+      <div className='relative wrap overflow-hidden p-4 md:p-10 h-full'>
         <div
-          className='border-2-2 absolute border-opacity-20 border-gray-700 dark:border-gray-300 h-full border'
+          className='border-2-2 absolute border-opacity-20 border-gray-700 dark:border-gray-300 h-full border hidden md:block'
           style={{ left: "50%" }}
         ></div>
         {experiences.map((exp, index) => (
