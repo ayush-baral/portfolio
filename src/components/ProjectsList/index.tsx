@@ -1,23 +1,28 @@
 import React from "react";
 import MoveFromBottomOnView from "../Motions/MoveFromBottomOnView";
 import Project from "../Project";
-import { PROJECT } from "./project";
+import { PROJECTS } from "./project";
 
 const ProjectsList = () => {
   return (
-    <div className="py-[50px] px-3 md:px-[60px] lg:px-[100px] flex flex-col justify-center items-center text-center">
+    <div className="py-12 px-4 md:px-16 lg:px-24 flex flex-col items-center text-center">
       <MoveFromBottomOnView>
-        <div className="w-full md:w-[65%]">
-          <h1 className="text-5xl my-20 mx-0">Create & Inspire. It's Ayush</h1>
-          <p>
+        <div className="md:w-3/4 lg:w-2/3 mb-16">
+          <h1
+            className="text-4xl lg:text-5xl font-bold mb-8"
+            aria-label="Introduction to Ayush's projects"
+          >
+            Create & Inspire. It's Ayush
+          </h1>
+          <p className="text-lg md:text-xl font-light">
             Welcome to the projects section. Here you can see some of the
-            projects that i have built while working as a web developer.
+            projects that I have built while working as a web developer.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-          {PROJECT?.map((project) => {
-            return <Project key={project.id} projectData={project} />;
-          })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+          {PROJECTS.map((project) => (
+            <Project key={project.id} projectData={project} />
+          ))}
         </div>
       </MoveFromBottomOnView>
     </div>
