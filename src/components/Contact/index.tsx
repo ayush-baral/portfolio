@@ -79,10 +79,17 @@ const Contact: React.FC = () => {
     toast.loading("Sending message...");
 
     try {
+      const emailData: Record<string, unknown> = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      };
+
       await emailjs.send(
         "service_oje07os",
         "template_80qce8m",
-        data,
+        emailData,
         "user_Nx1CU504JmnLwXRUtw605"
       );
       toast.success("Message sent!");
