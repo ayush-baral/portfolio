@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { BsMouse } from "react-icons/bs";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ThemeContext } from "../../context";
 import me from "../../assets/my-photo.jpg";
 
@@ -81,8 +81,16 @@ const Intro: React.FC = () => {
             and enable website optimization.
           </p>
           <div className='mt-8 flex justify-center lg:justify-start space-x-4'>
-            <SocialIcon Icon={FaGithub} href='#' darkMode={darkMode} />
-            <SocialIcon Icon={FaLinkedin} href='#' darkMode={darkMode} />
+            <SocialIcon
+              Icon={FaGithub}
+              href='https://github.com/ayush-baral'
+              darkMode={darkMode}
+            />
+            <SocialIcon
+              Icon={FaLinkedin}
+              href='https://www.linkedin.com/in/aayush-baral/'
+              darkMode={darkMode}
+            />
           </div>
         </motion.div>
 

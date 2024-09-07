@@ -83,7 +83,7 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
 
   const contentClasses = `${
     darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-800"
-  } rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 border-l-4 border-primary`;
+  } rounded-lg shadow-xl w-full md:w-[45%] px-6 py-4 border-l-4 border-primary`;
 
   const Content = () => (
     <>
@@ -150,7 +150,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
 
   return (
     <div className='container mx-auto w-full h-full'>
-      <div className='relative wrap overflow-hidden p-4 md:p-32 h-full'>
+      <div className='relative wrap overflow-hidden p-4 md:p-16 h-full'>
         <div
           className={`border-2-2 absolute border-opacity-20 border-primary h-full border hidden md:block`}
           style={{ left: "50%" }}
