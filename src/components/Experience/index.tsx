@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaBriefcase, FaCalendar } from "react-icons/fa";
+import { ThemeContext } from "../../context";
 
 interface WorkExperience {
   company: string;
@@ -78,30 +79,41 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
   description,
   isLeft,
 }) => {
-  const contentClasses =
-    "bg-gray-100 dark:bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4";
+  const { darkMode } = useContext(ThemeContext);
+
+  const contentClasses = `${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-800"
+  } rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 border-l-4 border-primary`;
 
   const Content = () => (
     <>
       <div className='md:hidden flex justify-center mb-4'>
-        <div className='z-20 flex items-center bg-gray-800 shadow-xl w-8 h-8 rounded-full'>
+        <div className='z-20 flex items-center bg-primary shadow-xl w-8 h-8 rounded-full'>
           <FaBriefcase className='text-white mx-auto' />
         </div>
       </div>
-      <h3 className='mb-3 font-bold text-gray-800 dark:text-white text-xl'>
-        {company}
-      </h3>
-      <h4 className='mb-3 font-semibold text-gray-700 dark:text-gray-300 text-md'>
+      <h3 className='mb-3 font-bold text-xl text-primary'>{company}</h3>
+      <h4
+        className={`mb-3 font-semibold text-md ${
+          darkMode ? "text-gray-300" : "text-gray-700"
+        }`}
+      >
         {position}
       </h4>
-      <p className='text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-400 text-opacity-100 flex items-center mb-3'>
-        <FaCalendar className='mr-2' /> {duration}
+      <p
+        className={`text-sm leading-snug tracking-wide ${
+          darkMode ? "text-gray-400" : "text-gray-600"
+        } text-opacity-100 flex items-center mb-3`}
+      >
+        <FaCalendar className='mr-2 text-primary' /> {duration}
       </p>
       <ul className='list-disc pl-5'>
         {description.map((item, idx) => (
           <li
             key={idx}
-            className='text-sm text-gray-600 dark:text-gray-400 mb-1'
+            className={`text-sm ${
+              darkMode ? "text-gray-400" : "text-gray-600"
+            } mb-1`}
           >
             {item}
           </li>
@@ -119,8 +131,8 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
       ) : (
         <div className='order-1 w-5/12 hidden md:block'></div>
       )}
-      <div className='z-20 items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full hidden md:flex'>
-        <FaBriefcase className='text-white mx-auto' />
+      <div className='z-20 items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full hidden md:flex'>
+        <FaBriefcase className='mx-auto text-white' />
       </div>
       {!isLeft ? (
         <div className={`order-1 ${contentClasses}`}>
@@ -134,11 +146,13 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
 };
 
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <div className='container mx-auto w-full h-full'>
       <div className='relative wrap overflow-hidden p-4 md:p-32 h-full'>
         <div
-          className='border-2-2 absolute border-opacity-20 border-gray-700 dark:border-gray-300 h-full border hidden md:block'
+          className={`border-2-2 absolute border-opacity-20 border-primary h-full border hidden md:block`}
           style={{ left: "50%" }}
         ></div>
         {experiences.map((exp, index) => (
@@ -150,9 +164,15 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
 };
 
 const WorkExperienceTimeline: React.FC = () => {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
-    <div className='bg-white dark:bg-gray-900 py-8'>
-      <h2 className='text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white'>
+    <div
+      className={`${
+        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"
+      } py-8`}
+    >
+      <h2 className='text-3xl font-bold text-center mb-8 text-primary'>
         Work Experience
       </h2>
       <Timeline experiences={experiences} />
