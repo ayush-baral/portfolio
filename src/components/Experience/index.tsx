@@ -136,7 +136,7 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   return (
     <div className='container mx-auto w-full h-full'>
-      <div className='relative wrap overflow-hidden p-4 md:p-10 h-full'>
+      <div className='relative wrap overflow-hidden p-4 md:p-32 h-full'>
         <div
           className='border-2-2 absolute border-opacity-20 border-gray-700 dark:border-gray-300 h-full border hidden md:block'
           style={{ left: "50%" }}
