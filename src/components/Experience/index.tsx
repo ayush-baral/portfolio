@@ -87,12 +87,12 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
 
   const Content = () => (
     <>
-      <div className='md:hidden flex justify-center mb-4'>
-        <div className='z-20 flex items-center bg-primary shadow-xl w-8 h-8 rounded-full'>
-          <FaBriefcase className='text-white mx-auto' />
+      <div className="md:hidden flex justify-center mb-4">
+        <div className="z-20 flex items-center bg-primary shadow-xl w-8 h-8 rounded-full">
+          <FaBriefcase className="text-white mx-auto" />
         </div>
       </div>
-      <h3 className='mb-3 font-bold text-xl text-primary'>{company}</h3>
+      <h3 className="mb-3 font-bold text-xl text-primary">{company}</h3>
       <h4
         className={`mb-3 font-semibold text-md ${
           darkMode ? "text-gray-300" : "text-gray-700"
@@ -105,9 +105,9 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
           darkMode ? "text-gray-400" : "text-gray-600"
         } text-opacity-100 flex items-center mb-3`}
       >
-        <FaCalendar className='mr-2 text-primary' /> {duration}
+        <FaCalendar className="mr-2 text-primary" /> {duration}
       </p>
-      <ul className='list-disc pl-5'>
+      <ul className="list-disc pl-5">
         {description.map((item, idx) => (
           <li
             key={idx}
@@ -123,36 +123,34 @@ const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
   );
 
   return (
-    <div className='mb-8 flex justify-between items-center w-full'>
+    <div className="mb-8 flex justify-between items-center w-full relative">
       {isLeft ? (
         <div className={`order-1 ${contentClasses}`}>
           <Content />
         </div>
       ) : (
-        <div className='order-1 w-5/12 hidden md:block'></div>
+        <div className="order-1 w-5/12 hidden md:block"></div>
       )}
-      <div className='z-20 items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full hidden md:flex'>
-        <FaBriefcase className='mx-auto text-white' />
+      <div className="z-20 hidden  md:flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full absolute left-1/2 transform -translate-x-1/2">
+        <FaBriefcase className="mx-auto text-white" />
       </div>
       {!isLeft ? (
         <div className={`order-1 ${contentClasses}`}>
           <Content />
         </div>
       ) : (
-        <div className='order-1 w-5/12 hidden md:block'></div>
+        <div className="order-1 w-5/12 hidden md:block"></div>
       )}
     </div>
   );
 };
 
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
-  const { darkMode } = useContext(ThemeContext);
-
   return (
-    <div className='container mx-auto w-full h-full'>
-      <div className='relative wrap overflow-hidden p-4 md:p-16 h-full'>
+    <div className="container mx-auto w-full h-full">
+      <div className="relative wrap overflow-hidden p-4 md:p-16 h-full">
         <div
-          className={`border-2-2 absolute border-opacity-20 border-primary h-full border hidden md:block`}
+          className="border-2-2 absolute border-opacity-20 border-primary h-full border hidden md:block"
           style={{ left: "50%" }}
         ></div>
         {experiences.map((exp, index) => (
@@ -172,7 +170,7 @@ const WorkExperienceTimeline: React.FC = () => {
         darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"
       } py-8`}
     >
-      <h2 className='text-3xl font-bold text-center mb-8 text-primary'>
+      <h2 className="text-3xl font-bold text-center mb-8 text-primary">
         Work Experience
       </h2>
       <Timeline experiences={experiences} />
