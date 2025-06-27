@@ -15,13 +15,30 @@ interface TimelineProps {
 
 const experiences: WorkExperience[] = [
   {
+    company: "Techhaus",
+    position: "Software Engineer",
+    duration: "January 2025 -- Current",
+    description: [
+      "Developed scalable web applications using Next.js, Shadcn, Prisma, React Hook Form, Zod, and Zustand, ensuring responsive and high-performance user interfaces.",
+      "Designed and implemented a Node.js microservice architecture utilizing AWS SQS as a queue for asynchronous email delivery via AWS SNS and SMS notifications through Twilio, enhancing communication reliability.",
+      "Integrated PostHog for real-time analytics, enabling data-driven decisions and user behavior tracking to optimize application performance.",
+      "Utilized Docker for containerized development and deployment, ensuring consistent environments across development, staging, and production.",
+      "Collaborated with cross-functional teams to define requirements, architect solutions, and deliver features, adhering to agile methodologies.",
+      "Conducted code reviews to ensure code quality, maintainability, and adherence to best practices, fostering a culture of continuous improvement and team collaboration.",
+      "Streamlined development workflows by setting up CI/CD pipelines integrated with Husky, ESLint, Prettier, and Commitlint to enforce code quality and consistency.",
+      "Wrote unit and integration tests using Vitest, achieving high test coverage and maintaining code quality.",
+      "Mentored and guided interns and junior engineers, providing valuable support to help them grow in their roles.",
+    ],
+  },
+  {
     company: "Khalti",
-    position: "Frontend Developer",
-    duration: "July 2023 -- Current",
+    position: "Software Engineer",
+    duration: "July 2023 -- January 2025",
     description: [
       "Worked in an agile environment, collaborating closely with stakeholders to gather requirements and deliver high-quality frontend solutions.",
       "Engineered new systems with Next.js, utilizing React Query for data fetching, Zustand for state management, React Hook Form for form handling, and Zod for schema validation, optimizing performance and scalability for modern web applications.",
       "Directed the creation of a centralized login system with HTTP-only cookies, ensuring enhanced security and seamless user authentication across subdomains.",
+      "Led the revamp of Khalti Payment Gateway using React Native, implementing secure payment processing and responsive design serving millions of users. Enhanced platform reliability with TypeScript, real-time status tracking, and efficient state management.",
       "Designed and implemented a streamlined architecture for merchant and admin systems, optimizing build processes with Vite; while supporting over 1000 concurrent users across subdomains.",
       "Boosted project performance by reducing build times by 87.5% through migrating from Webpack to Vite.",
       "Refined development workflows by implementing CI/CD pipelines with Husky, ESLint, Prettier, and Commitlint.",
@@ -59,19 +76,17 @@ const experiences: WorkExperience[] = [
   },
   {
     company: "Clinch Tech",
-    position: "Frontend Developer / Intern",
-    duration: "Sept. 2021 -- June 2022",
+    position: "Frontend Developer",
+    duration: "May 2021 -- June 2022",
     description: [
       "Crafted client-facing websites and dashboards using Next.js, Chakra UI, TypeScript, and Redux Toolkit, creating responsive and dynamic user interfaces.",
       "Developed an in-house CRM system with React, React Hook Form, React Query, TypeScript, and Tailwind CSS, improving internal productivity and data management.",
       "Engaged in client meetings and team discussions, contributing to project scope and design, and providing valuable feedback.",
       "Tested new features to identify and resolve bugs, ensuring high functionality and user satisfaction.",
-      "Built a markdown text editor and a movie seat booking app during the internship, gaining practical experience with React and Redux Toolkit.",
-      "Constructed a catalog website for a client, enhancing the client’s online presence and user engagement.",
+      "Constructed a catalog website for a client, enhancing the client's online presence and user engagement.",
     ],
   },
 ];
-
 const TimelineItem: React.FC<WorkExperience & { isLeft: boolean }> = ({
   company,
   position,
