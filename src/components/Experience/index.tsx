@@ -47,18 +47,18 @@ const experiences: WorkExperience[] = [
       "Conducted thorough code reviews to ensure adherence to best practices, identify issues early, and maintain high standards of code quality.",
     ],
   },
-  {
-    company: "Venture Four Technology Pvt Ltd",
-    position: "Frontend Developer (Part-Time)",
-    duration: "March 2024 -- Present",
-    description: [
-      "Developed and maintained various projects using Next.js, TypeScript, and similar technologies, ensuring high-quality frontend solutions.",
-      "Led a team of 3 frontend developers, coordinating tasks and providing guidance to achieve project goals efficiently.",
-      "Contributed to project architecture, optimizing design and implementation strategies to enhance performance and scalability.",
-      "Collaborated with cross-functional teams to integrate frontend features with backend services, ensuring seamless functionality.",
-      "Implemented best practices in coding and design, resulting in improved maintainability and code quality.",
-    ],
-  },
+  // {
+  //   company: "Venture Four Technology Pvt Ltd",
+  //   position: "Frontend Developer (Part-Time)",
+  //   duration: "March 2024 -- Present",
+  //   description: [
+  //     "Developed and maintained various projects using Next.js, TypeScript, and similar technologies, ensuring high-quality frontend solutions.",
+  //     "Led a team of 3 frontend developers, coordinating tasks and providing guidance to achieve project goals efficiently.",
+  //     "Contributed to project architecture, optimizing design and implementation strategies to enhance performance and scalability.",
+  //     "Collaborated with cross-functional teams to integrate frontend features with backend services, ensuring seamless functionality.",
+  //     "Implemented best practices in coding and design, resulting in improved maintainability and code quality.",
+  //   ],
+  // },
   {
     company: "Dhuni Software",
     position: "Frontend Developer",
